@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Activity Recognition Classification</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="number" name="time_seconds" placeholder="time_seconds" required="required" step="any" />
+        <input type="number" name="Accelaration in G Frontal" placeholder="Accelaration in G Frontal" required="required" step="any" />
+        <input type="number" name="Accelaration in G Vertical" placeholder="Accelaration in G Vertical" required="required" step="any" />
+		<input type="number" name="Accelaration in G Lateral" placeholder="Accelaration in G Lateral" required="required" step="any"/>
+        <input type="number" name="RSSI" placeholder="RSSI" required="required" step="any"/>
+        <input type="number" name="Phase" placeholder="Phase" required="required" step="any"/>
+        <input type="number" name="Frequency" placeholder="Frequency" required="required" step="any"/>
+        <label for="ID">Choose a ID:</label>
+            <select id="ID" name="ID">
+  <option value="3">3</option>
+  <option value="4">4</option>
+</select>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   <!-- {{ prediction_text }} -->
+
+ </div>
+
+
+</body>
+</html>
