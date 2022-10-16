@@ -14,3 +14,4 @@ We choose an epoch time of 250 milliseconds according to the EVAAL technical ann
 For each activity 15 temporal sequences of input RSS data are present. The dataset contains 480 sequences, for a total number of 42240 instances.
 
 We also consider two kind of bending activity, illustrated in the figure provided (bendingTupe.pdf). The positions of sensor nodes with the related identifiers are shown in figure sensorsPlacement.pdf.
+App Link:https://activity-older-recognition.herokuapp.com/
